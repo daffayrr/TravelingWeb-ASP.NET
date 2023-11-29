@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <style>
+        /* Custom styles for the footer */
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+        }
+
+        .footer-col {
+            margin-bottom: 20px;
+        }
+
+        .navbar {
+            transition: background-color 0.3s ease-in-out; /* Smooth transition for background color */
+        }
+
+        .navbar-dark {
+            background-color: rgba(0, 0, 0, 0.7); /* Initial background color (dark) */
+        }
+
+        .navbar-light.scrolled {
+            background-color: rgba(255, 255, 255, 0.9) !important; /* Background color when scrolled (light) */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-light bg-light">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse navbar-light bg-light" id="navbarNav">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />        
+    </div>
+
+    <div class="container-fluid footer">
+        <div class="container">
+            <hr />
+            <div class="row">
+                <div class="col-md-4 footer-col">
+                    
+                    <img src="https://cdn.5minvideo.id/images/kumpulan-gambar-logo-kai-terbaik/Kai-Logo-Png.png" alt="" height="110" width="250"/>
+                    <hr />
+                    
+                    <p>Situs penyedia informasi seputar tempat wisata, makanan, dan berbagai keunikan lain, sebagai panduan kamu ketika hendak berkunjung ke Daerah Istimewa Yogyakarta.</p>
+                </div>
+                <div class="col-md-4 footer-col">
+                    <h4>Column 2</h4>
+                    <p class="k-text-end">@Html.ActionLink("Home", "Index", "Home")</p>
+                    <p>@Html.ActionLink("About", "About", "Home")</p>
+                    <p>@Html.ActionLink("Contact", "Contact", "Home")</p>
+                </div>
+                <div class="col-md-4 footer-col">
+                    <h4>Column 3</h4>
+                    <p>Content for column 3 goes here.</p>
+                    <p></p>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="modal-footer ">
+        <p class="text-center">&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+     </footer>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    
+</body>
+</html>
